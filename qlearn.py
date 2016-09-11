@@ -78,7 +78,7 @@ def trainNetwork(model,args):
     #In Keras, need to reshape
     s_t = s_t.reshape(1, s_t.shape[0], s_t.shape[1], s_t.shape[2])
 
-    if args['mode'] == 'Run':
+    if args['mode'].lower() == 'run':
         OBSERVE = 999999999    #We keep observe, never train
         epsilon = FINAL_EPSILON
         print ("Now we load weight")
